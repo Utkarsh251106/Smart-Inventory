@@ -13,10 +13,10 @@ Copy the provided bot token (you’ll need it later). The format will be:
 1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
 ```
 ## 2. Get Your Chat ID:
-# For Personal Chats:
+### For Personal Chats:
 Search for @userinfobot in Telegram and start the bot.
 It will automatically send you your Chat ID.
-# For Group Chats:
+### For Group Chats:
 Add your bot to the group.
 Send any message in the group.
 Open this URL in a browser (replace <BOT_TOKEN> with your actual bot token):
@@ -30,7 +30,7 @@ For example:
 ```
 Your Group Chat ID is -1001234567890.
 
-# 3. Example Code to Send Messages to Telegram:
+## 3. Example Code to Send Messages to Telegram:
 Once you have your BOT_TOKEN and CHAT_ID, you can use the following code to send messages.
 
 ```bash
@@ -50,7 +50,7 @@ message = "Hello, this is a message from your bot!"
 send_telegram_message(message)
 ```
 
-# 4. Set Up Your Environment:
+## 4. Set Up Your Environment:
 Make sure you have Python installed.
 Install requests to send HTTP requests:
 ```bash
