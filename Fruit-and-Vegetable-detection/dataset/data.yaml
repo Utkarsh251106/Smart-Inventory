@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['Cabbage', 'Capsicum', 'orange', 'tomato', 'watermelon']
+
+roboflow:
+  workspace: anagh-sqtru
+  project: smart-inventory-management
+  version: 7
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/anagh-sqtru/smart-inventory-management/dataset/7
