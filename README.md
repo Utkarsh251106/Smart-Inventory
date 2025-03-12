@@ -29,11 +29,17 @@ Follow this path to get the model(best.pt)-> model-training-data/runs/model for 
 #### Run your Code_for_images.ipynb file for detection in an image
 #### Run your Code_for_video.ipynb file for detections in a video
 
+### Step 5: To run the code(for Fruit-and-Vegetable-detection files):
+  To run the code
+```bash
+# Start the Jupyter Notebook environment using the command
+jupyter notebook
+```
 Follow this path to get the model(best.pt)-> Fruit-and-Vegetable-detection/runs/detect/train/weights  for vegtables and fruits
 #### Run your Code_for_images.ipynb file for detection in an image
 #### Run your Code_for_video.ipynb file for detections in a video
 
-### Step 5(Optional): To run the streamlit file(present in the Fruit-and-Vegetable-detection folder):
+### Step 6(Optional): To run the streamlit file(present in the Fruit-and-Vegetable-detection folder):
   To run the code
 ```bash
 # Start the Jupyter Notebook environment using the command
