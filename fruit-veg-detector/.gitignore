@@ -1,0 +1,28 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore environment files (for secrets)
+.env
+
+# Ignore model output folder (runs, training logs)
+runs/
+
+# Ignore saved models and checkpoints (optional if using checkpointing)
+*.pkl
+*.h5
+*.weights
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+
+# Ignore logs
+*.log
+
+# Ignore any other temporary or irrelevant files
+*.tmp
+*.bak
+*.swp
