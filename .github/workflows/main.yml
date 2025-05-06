@@ -1,0 +1,42 @@
+name: FruitVegDetector CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.7'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run basic test
+      run: |
+        echo "You can place actual tests here"
+        python -c "print('✅ CI/CD working')"
+
+    # Optional: Telegram alert
+    - name: Send Telegram message
+      if: success()
+      run: |
+        curl -s -X POST https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.CHAT_ID }} -d text="✅ Code pushed and CI succeeded!"
+
+    # Streamlit Deployment (Optional)
+    - name: Run Streamlit app (for testing)
+      run: |
+        nohup streamlit run fruit-veg-detector/app.py &
+      continue-on-error: true # Allow Streamlit app to run in the background without blocking pipeline
